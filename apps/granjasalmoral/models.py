@@ -19,8 +19,8 @@ class InfoPersonal(models.Model):#informacion del personal
     puesto=models.CharField(max_length=200)#pùesto que desempeña en la empresa
     hra_entrada=models.TimeField()#hora de entrada
     hra_salida=models.TimeField()#hora de salida
-    fech_engreso_empresa=models.DateField()#fecha de ingreso a la empresa
-    fech_engreso_cooperativa=models.DateField()#fecha de ingreso a la cooperativa
+    fech_ingreso_empresa=models.DateField()#fecha de ingreso a la empresa
+    fech_ingreso_cooperativa=models.DateField()#fecha de ingreso a la cooperativa
     img = models.FileField(upload_to='uploads/',default="")#imagen de identificacion
 
 class Jornada(models.Model):#jornada laboral
@@ -37,7 +37,7 @@ class Jornada(models.Model):#jornada laboral
 class comision(models.Model):#salir del centro de trabajo
     id_personal=models.CharField(max_length=30)#identificador del personal
     lugar_salida=models.CharField(max_length=100)#clugar donde sale
-    lugar_destinomodels.CharField(max_length=100)#clugar donde llega
+    lugar_destino=models.CharField(max_length=100)#clugar donde llega
     distancia=models.CharField(max_length=50)#distancia de origen - destno
     vehiculo=models.CharField(max_length=50)#placas de identificacion del vehiculo
     fecha_orden=models.DateField()#fecha cuando fue comisionado
