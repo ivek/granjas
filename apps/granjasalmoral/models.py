@@ -36,9 +36,9 @@ class InfoPersonal(models.Model):#informacion del personal
 
 class Jornada(models.Model):#jornada laboral
     id_personal=models.ForeignKey(InfoPersonal, null=True, blank=True, on_delete=models.CASCADE)#identificador del personal
-    #fech_actual=models.DateField(null=True, blank=True)#dia actual que labora
-    #hra_in=models.TimeField(null=True, blank=True)#hora en que entro a laboral el dia
-    #hra_out=models.TimeField(null=True, blank=True)#hora en que salio a laboral el dia
+    fech_actual=models.DateField(null=True, blank=True)#dia actual que labora
+    hra_in=models.TimeField(null=True, blank=True)#hora en que entro a laboral el dia
+    hra_out=models.TimeField(null=True, blank=True)#hora en que salio a laboral el dia
     retardo=models.BooleanField()#llegada despues de la hora de entrada laboral
     justificado=models.BooleanField()#justificar el dia laboral
     comision_personal=models.BooleanField()#si esta comisionado en alguna otro lugar. 
